@@ -1,0 +1,7 @@
+Requirements
+streamlit
+scikit-learn
+joblib
+pillow
+opencv-python
+numpy
