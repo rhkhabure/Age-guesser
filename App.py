@@ -73,3 +73,13 @@ if uploaded_file is not None:
         st.success(f"🧠 Predicted Age Group: **{pred_value}**")
     except Exception as e:
         st.error(f"Error processing image: {e}")
+
+# Clean up .venv directory if it exists
+venv_path = os.path.join(os.getcwd(), ".venv")
+if os.path.exists(venv_path) and os.path.isdir(venv_path):
+    try:
+        import shutil
+        shutil.rmtree(venv_path)
+        st.success(".venv directory removed.")
+    except Exception as e:
+        st.error(f"Error removing .venv directory: {e}")
